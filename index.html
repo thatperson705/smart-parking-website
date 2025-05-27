@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Parking System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Smart Parking System</h1>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+  <div class="hero-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="Car Icon" class="hero-icon" />
+    <h1>Smart Parking System</h1>
+    <p>Find, book, and park with ease — modern parking for modern cities.</p>
+    <a href="#booking" class="btn">Book Now</a>
+  </div>
+</section>
+<section id="booking" class="booking-section">
+  <div class="booking-container">
+    <h2>Book Your Slot</h2>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="timing">Visit Timing</label>
+        <input type="text" id="timing" placeholder="e.g. 10:00 AM - 11:00 AM" required>
+      </div>
+      <button type="submit" class="btn-submit">Confirm Booking</button>
+    </form>
+
+    <div class="confirmation-message" id="confirmation" style="display: none;">
+      <div class="tick">✅</div>
+      <p>Your slot has been booked successfully!</p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="container" id="features">
+  <h2 class="section-heading">Key Features</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/sensor.png" alt="Real-time Slot Icon" />
+      <h3>Real-Time Slot Detection</h3>
+      <p>Instantly monitors and updates available parking slots using smart sensors.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/smartphone.png" alt="Mobile App Icon" />
+      <h3>Mobile Access</h3>
+      <p>Access the parking system through a user-friendly mobile interface.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/map-marker.png" alt="Navigation Icon" />
+      <h3>Navigation Assistance</h3>
+      <p>Guides drivers to the nearest free slot with real-time directions.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://img.icons8.com/ios-filled/50/lock-2.png" alt="Security Icon" />
+      <h3>Secure Entry & Exit</h3>
+      <p>Automated boom barriers and license plate recognition ensure safety.</p>
+    </div>
+  </div>
+</section>
+
+  <section class="container" id="benefits">
+  <h2>Features & Benefits</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/smart-car.png" alt="Smart Parking Icon" />
+      <h3>Smart Detection</h3>
+      <p>Sensors detect available parking spots in real-time.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/cloud-checked.png" alt="Cloud Icon" />
+      <h3>Live Updates</h3>
+      <p>Drivers get instant updates via the dashboard.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/navigation.png" alt="Navigation Icon" />
+      <h3>Smart Navigation</h3>
+      <p>Guides drivers to the nearest free slot automatically.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://img.icons8.com/ios-filled/50/eco.png" alt="Eco Friendly Icon" />
+      <h3>Eco Friendly</h3>
+      <p>Reduces emissions by minimizing idle time.</p>
+    </div>
+  </div>
+</section>
+<section id="gallery" class="gallery">
+  <div class="slideshow-container">
+
+    <div class="slide fade">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=80" alt="Parking Lot 1" />
+    </div>
+
+    <div class="slide fade">
+      <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=700&q=80" alt="Parking Lot 2" />
+    </div>
+
+    <div class="slide fade">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=80" alt="Parking Lot 3" />
+    </div>
+
+  </div>
+
+  <br>
+
+  <!-- Dots for navigation -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+</section>
+
+
+
+  <section class="container" id="slots">
+    <h2>Live Slot Availability</h2>
+    <div id="slot-grid"></div>
+      <button onclick="generateSlots()">Refresh Availability</button>
+  </section>
+
+  <section class="container" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Smart Parking Solutions. All rights reserved.</p>
+  </footer>
+  <footer class="footer">
+  <div class="footer-container">
+    <p>📧 Email: <a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
+    <p>📞 Phone: <a href="tel:9876543219">9876543219</a></p>
+    <p class="tagline"> We can't save your sanity, but we can save you a spot </p>
+    <p>&copy; 2025 Smart Parking System. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  const form = document.getElementById("bookingForm");
+  const confirmation = document.getElementById("confirmationMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop actual form submission
+
+    // Hide the form
+    form.style.display = "none";
+
+    // Show confirmation message
+    confirmation.style.display = "block";
+  });
+</script>
+<script>
+  const form = document.getElementById("bookingForm");
+  const confirmation = document.getElementById("confirmation");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    form.style.display = "none";
+    confirmation.style.display = "block";
+  });
+</script>
+<script>
+let slideIndex = 1;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+// Also let user click dots to jump to slide:
+function currentSlide(n) {
+  slideIndex = n - 1; // Adjust because showSlides will add 1
+  showSlides();
+}
+</script>
+
+</body>
+</html>
+<script>
+  function generateSlots() {
+    const slotGrid = document.getElementById('slot-grid');
+    slotGrid.innerHTML = ''; // Clear existing slots
+    const totalSlots = 30; // You can change this
+
+    for (let i = 1; i <= totalSlots; i++) {
+      const slot = document.createElement('div');
+      slot.classList.add('slot');
+
+      const isAvailable = Math.random() > 0.4; // 60% chance it's available
+      slot.classList.add(isAvailable ? 'available' : 'occupied');
+      slot.innerText = `Slot ${i}`;
+
+      slotGrid.appendChild(slot);
+    }
+  }
+
+  // Initialize when page loads
+  window.onload = generateSlots;
+</script>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide-image');
+
+  function showSlide() {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+    });
+    slides[slideIndex].classList.add('active');
+    slideIndex = (slideIndex + 1) % slides.length;
+  }
+
+  // Show first slide immediately
+  showSlide();
+  // Then cycle every 3 seconds
+  setInterval(showSlide, 3000);
+</script>
+
